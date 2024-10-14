@@ -11,18 +11,14 @@
         <div class='container'>
             <h1>Ausrüstungsliste für TWW Season 1</h1>
             <form action="/submit" method="post">
-                <div class="slots">
-                    <label for="Kopf">Kopf:</label>
-                    <input type="text" id="Slot1" name="Kopf" required>
+                {% for item in items %}
+                <div class="slot-container">
+                    <label for="Slot_{{ loop.index }}">{{ item }}:</label>
+                    <input type="text" id="Slot_{{ loop.index }}"
+                        name="Item_{{ loop.index }}" required>
+                    <div class="zweiteslabel">Quelle</div>
                 </div>
-                <div class="slots">
-                    <label for="Hals">Hals:</label>
-                    <input type="text" id="Slot2" name="Hals" required>
-                </div>
-                <div class="slots">
-                    <label for="schulter">Schulter:</label>
-                    <input type="text" id="Slot3" name="Schulter" required>
-                </div>
+                {% endfor %}
                 <button type="submit" class="submit-button">refresh</button>
             </form>
         </div>
