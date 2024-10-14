@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='styles.css') }}">
+        <title>Meine Website</title>
+    </head>
+    <body>
+        <div class='container'>
+            <h1>Ausrüstungsliste für TWW Season 1</h1>
+            <form action="/submit" method="post">
+                <div class="slot_1">
+                    <label for="Kopf">Kopf:</label>
+                    <input type="text" id="Slot1" name="Kopf" required>
+                </div>
+                <div class="slot_2">
+                    <label for="Hals">Hals:</label>
+                    <input type="text" id="Slot2" name="Hals" required>
+                </div>
+                <button type="submit" class="submit-button">refresh</button>
+            </form>
+        </div>
+    </body>
+</html>
