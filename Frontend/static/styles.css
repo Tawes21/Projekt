@@ -47,6 +47,13 @@ textarea {
     align-items: center;
 }
 
+.slot_3 {
+    display: flex;
+    margin-bottom: 10px;
+    text-align: left;
+    align-items: center;
+}
+
 .submit-button {
     background-color: #333;
     color: aliceblue;
