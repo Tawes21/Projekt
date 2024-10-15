@@ -10,6 +10,23 @@ h1 {
     color: #007bff;
 }
 
+.header-container {
+    max-width: 700px;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.header-slot,
+.header-quelle {
+    flex: 1;
+    display: inline;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 100px;
+}
+
+
 .container {
     max-width: 800px;
     margin: auto;
@@ -41,13 +58,19 @@ input {
 
 }
 
+    {
+    justify-content: space-between;
+}
+
 .zweiteslabel {
     flex: 1;
     margin-left: 10px;
-    text-align: center;
+    text-align: left;
+    margin-left: 50px;
 }
 
 .submit-button {
+    margin-top: 30px;
     background-color: #333;
     color: aliceblue;
     border: none;

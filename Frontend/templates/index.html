@@ -5,21 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"
             href="{{ url_for('static', filename='styles.css') }}">
-        <title>Meine Website</title>
+        <title>Ausrüstungsliste für TWW Season 1</title>
     </head>
     <body>
         <div class='container'>
             <h1>Ausrüstungsliste für TWW Season 1</h1>
             <form action="/submit" method="post">
+                <div class="header-container">
+                    <h3 class="header-slot">SLOT</h3>
+                    <h3 class="header-quelle">QUELLE</h3>
+                </div>
                 {% for item in items %}
                 <div class="slot-container">
-                    <label for="Slot_{{ loop.index }}">{{ item }}:</label>
+                    <label for="Slot_{{ loop.index }}">{{ item[0] }}:</label>
                     <input type="text" id="Slot_{{ loop.index }}"
-                        name="Item_{{ loop.index }}" required>
-                    <div class="zweiteslabel">Quelle</div>
+                        name="Slot_{{ loop.index }}"
+                        placeholder="Neue Quelle eingeben">
+                    <div class="zweiteslabel">{{ item[1] }}</div>
                 </div>
                 {% endfor %}
-                <button type="submit" class="submit-button">refresh</button>
+                <button type="submit"
+                    class="submit-button">Aktualisieren</button>
             </form>
         </div>
     </body>
